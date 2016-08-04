@@ -1,6 +1,7 @@
 """
 Polyhack bot: IRC bot
 """
+
 #!/usr/bin/env python3
 
 # PolyHack bot
