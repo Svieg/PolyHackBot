@@ -1,6 +1,7 @@
 """
-Polyhack bot: IRC bot for #polyhack_ on freenode
+Polyhack bot: IRC bot
 """
+
 #!/usr/bin/env python3
 
 # PolyHack bot
@@ -37,7 +38,7 @@ PAYLOAD = {"longUrl": "",
            "apiKey": "YOUR PO.ST API KEY",  # You need to change that
            "format": "txt"}
 
-GIRLS = {"fille", "chick", "fanny", "melitza", "femme"}
+GIRLS = {"fille", "chick", "femme"}
 
 READ_BUFFER = ""
 
@@ -46,7 +47,7 @@ S.connect((HOST, PORT))
 
 S.send(bytes("NICK %s\r\n" % NICK, "UTF-8"))
 S.send(bytes("USER %s %s bla :%s\r\n" % (IDENT, HOST, REALNAME), "UTF-8"))
-S.send(bytes("JOIN #polyhack_\r\n", "UTF-8"))
+S.send(bytes("JOIN <YOUR_CHANNEL>\r\n", "UTF-8"))
 S.send(bytes("PRIVMSG %s :Hello Master\r\n" % MASTER, "UTF-8"))
 
 while 1:
